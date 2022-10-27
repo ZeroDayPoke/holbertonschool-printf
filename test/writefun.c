@@ -1,7 +1,19 @@
 #include "main.h"
 
 /**
- * write_int - function that puts ints to SO
+ * write_to_SO - function that writes a char to SO
+ * @c: character to be written
+ * Return: write output
+ */
+int write_to_SO(char c)
+{
+	return (write(1, &c, 1));
+}
+
+#include "main.h"
+
+/**
+ * write_int - function that writes ints to SO
  * @n: int to be printed
  * Return: void
  */
@@ -40,5 +52,21 @@ void write_int(int n)
 		}
 		write_to_SO(intArr[nCount] + '0');
 		nCount--;
+	}
+}
+
+/**
+ * write_string - writes string to SO
+ * @str: pointer input argument (str herein)
+ * Return: void
+ */
+void write_string(char *str)
+{
+	int a = 0;
+
+	while (*(str + a) != '\0')
+	{
+		write_to_SO(*(str + a));
+		a++;
 	}
 }
