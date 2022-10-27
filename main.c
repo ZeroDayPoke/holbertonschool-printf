@@ -1,6 +1,7 @@
 #include <limits.h>
 #include <stdio.h>
 #include "main.h"
+#include <string.h>
 
 /**
  * main - Entry point
@@ -9,6 +10,8 @@
  */
 int main(void)
 {
-    _printf("We built this city on %s, with %d units, of type %c, in %i hour(s) at 80%% power", "Rock & Roll", 2, 'U', 1);
+    _printf("TEST %s %s TEST", "test", "this");
+    printf("%ld\n", strlen("TEST test this TEST"));
+    printf("%d\n", totesWrite);
     return (0);
 }

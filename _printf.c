@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 	};
 
 	va_start(varArg, format);
+	totesWrite = 0;
 	while (format && format[i + 1])
 	{
 		if (format[i] == '%')
@@ -44,5 +45,6 @@ int _printf(const char *format, ...)
 	write_to_SO(format[i]);
 	va_end(varArg);
 	write_to_SO(10);
-	return (0);
+	totesWrite--;
+	return (totesWrite);
 }

@@ -7,6 +7,7 @@
  */
 int write_to_SO(char c)
 {
+	totesWrite++;
 	return (write(1, &c, 1));
 }
 

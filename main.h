@@ -8,6 +8,11 @@
 #include <stdlib.h> /* includes malloc() & free() */
 #include <stdarg.h> /* includes va_functions */
 
+/*
+ * global variables declared below
+ */
+int totesWrite;
+
 /**
  * _pcall - typedef of struct used to call write functions for _printf()
  * @fun: pointer to function to invoke when format character matches
