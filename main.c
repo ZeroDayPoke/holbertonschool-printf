@@ -2,6 +2,6 @@
 
 int main(void)
 {
-	write_int(555);
+	write_int(420);
 	return (0);
 }
