@@ -26,7 +26,7 @@ typedef struct _print_void_call _pcall;
  * prototypes - function protos below
  */
 int _printf(const char *format, ...);
-int _writechar(char c);
-int _writeint(int i);
+int write_to_SO(char c);
+void write_int(int n);
 
 #endif
