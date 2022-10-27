@@ -28,6 +28,11 @@ int _printf(const char *format, ...)
 					betty[j].fun(varArg);
 					i++;
 				}
+				else if (format[i + 1] == '%')
+				{
+					write_to_SO('%');
+					i++;
+				}
 			}
 		}
 		else
