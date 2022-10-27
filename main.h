@@ -4,11 +4,9 @@
 /*
  * libraries - to be included
  */
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdarg.h>
+#include <unistd.h> /* includes write() function */
+#include <stdlib.h> /* includes malloc() & free() */
+#include <stdarg.h> /* includes va_functions */
 
 /**
  * _printf_void_call - vel'koz approved
