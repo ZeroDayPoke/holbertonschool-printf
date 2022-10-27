@@ -2,6 +2,6 @@
 
 int main(void)
 {
-	write_int(420);
+	_printf("ci", '0', 420);
 	return (0);
 }

@@ -18,7 +18,7 @@ struct _printf_void_call
 {
 	void (*fun)(va_list varArg);
 };
-typedef struct _print_void_call _pcall;
+typedef struct _printf_void_call _pcall;
 
 /*
  * prototypes - function protos below
@@ -26,5 +26,7 @@ typedef struct _print_void_call _pcall;
 int _printf(const char *format, ...);
 int write_to_SO(char c);
 void write_int(int n);
+void p_all_char(va_list chrArg);
+void p_all_int(va_list intArg);
 
 #endif
