@@ -2,6 +2,6 @@
 
 int main(void)
 {
-	_printf("ci", '0', 420);
+	_printf("cis", '0', 420, "TEST");
 	return (0);
 }

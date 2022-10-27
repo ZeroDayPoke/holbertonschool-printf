@@ -28,5 +28,7 @@ int write_to_SO(char c);
 void write_int(int n);
 void p_all_char(va_list chrArg);
 void p_all_int(va_list intArg);
+void p_all_str(va_list strArg);
+void write_string(char *str);
 
 #endif

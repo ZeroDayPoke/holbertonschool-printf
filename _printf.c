@@ -21,6 +21,19 @@ void p_all_int(va_list intArg)
 }
 
 /**
+ * p_all_str - prints strings from print_all
+ * @strArg: inbound strArg
+ * Return: just prints to SO
+ */
+void p_all_str(va_list strArg)
+{
+	char *charArr;
+
+	charArr = va_arg(strArg, char *);
+	write_string(charArr);
+}
+
+/**
  * _printf - prints to SO
  * @format: input args format string
  * Return: void (none)
@@ -29,9 +42,8 @@ int _printf(const char *format, ...)
 {
 	int i = 0, j;
 	va_list varArg;
-	char *delim = "";
-	char Arr[] = "ci";
-	_pcall betty[] = {{p_all_char}, {p_all_int}};
+	char Arr[] = "cis";
+	_pcall betty[] = {{p_all_char}, {p_all_int}, {p_all_str}};
 
 	va_start(varArg, format);
 	while (format && format[i])
