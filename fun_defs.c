@@ -8,6 +8,7 @@
 int p_all_char(va_list chrArg)
 {
 	int totesWrite = 0;
+
 	totesWrite += write_to_SO(va_arg(chrArg, int));
 	return (totesWrite);
 }
@@ -20,6 +21,7 @@ int p_all_char(va_list chrArg)
 int p_all_int(va_list intArg)
 {
 	int totesWrite = 0;
+
 	totesWrite += write_int(va_arg(intArg, int));
 	return (totesWrite);
 }

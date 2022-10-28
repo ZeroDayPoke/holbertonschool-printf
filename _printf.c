@@ -3,11 +3,11 @@
 /**
  * _printf - prints to SO
  * @format: input args format string
- * Return: void (none)
+ * Return: number of chars printed
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, j, totesWrite = 0;
+	int i = 0, j, totesWrite = 0, hcf_check;
 	va_list varArg;
 	_pcall betty[] = {
 		{p_all_int, 'd'},
@@ -16,22 +16,26 @@ int _printf(const char *format, ...)
 		{p_all_str, 's'}
 	};
 
+	hcf_check = _hcf(format);
+	if (hcf_check == -1)
+	{
+		return (-1);
+	}
 	va_start(varArg, format);
 	while (format && format[i + 1])
 	{
 		if (format[i] == '%')
 		{
+			i++;
+			if (format[i] == '%')
+			{
+				totesWrite += write_to_SO('%');
+			}
 			for (j = 0; betty[j].formChar; j++)
 			{
-				if (format[i + 1] == betty[j].formChar)
+				if (format[i] == betty[j].formChar)
 				{
 					totesWrite += betty[j].fun(varArg);
-					i++;
-				}
-				else if (format[i + 1] == '%')
-				{
-					totesWrite += write_to_SO('%');
-					i++;
 				}
 			}
 		}
@@ -43,6 +47,5 @@ int _printf(const char *format, ...)
 	}
 	totesWrite += write_to_SO(format[i]);
 	va_end(varArg);
-	write_to_SO(10);
 	return (totesWrite);
 }

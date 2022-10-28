@@ -13,18 +13,19 @@
  * @fun: pointer to function to invoke when format character matches
  * @formChar: format character
  *
- * Description: utilizes paired void function pointers and characters
+ * Description: utilizes paired int function pointers and characters
  */
 typedef struct
 {
 	int (*fun)(va_list varArg);
 	char formChar;
-} _pcall ;
+} _pcall;
 
 /*
  * prototypes - function protos below
  */
 int _printf(const char *format, ...);
+int _hcf(const char *format);
 int write_to_SO(char c);
 int write_int(int n);
 int p_all_char(va_list chrArg);
