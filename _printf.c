@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				for (j = 0; betty[j].formChar; j++)
+				for (j = 0; betty[j].formChar != NULL; j++)
 				{
 					if (format[i + 1] == betty[j].formChar)
 					{
