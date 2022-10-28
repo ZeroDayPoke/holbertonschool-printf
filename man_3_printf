@@ -2,7 +2,7 @@
 .SH NAME
 _printf - formatted output conversion
 .SH SYNOPSIS
-In order to use this function the user will require the following header file in it's entirety:
+In order to use this function the user will require the following header file in its entirety:
 .RE
 #include <main.h>
 .SH DESCRIPTION
