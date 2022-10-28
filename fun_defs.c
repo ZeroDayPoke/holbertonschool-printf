@@ -37,6 +37,16 @@ int p_all_str(va_list strArg)
 	char *charArr;
 
 	charArr = va_arg(strArg, char *);
+	if (charArr == NULL)
+	{
+		totesWrite += write_to_SO('(');
+		totesWrite += write_to_SO('n');
+		totesWrite += write_to_SO('u');
+		totesWrite += write_to_SO('l');
+		totesWrite += write_to_SO('l');
+		totesWrite += write_to_SO(')');
+		return (totesWrite);
+	}
 	totesWrite += write_string(charArr);
 	return (totesWrite);
 }
