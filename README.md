@@ -1,5 +1,5 @@
 # holbertonschool-printf
-<h1>printf (3) like function group project</h1>
+<h1>printf Pseudocode</h1>
 
 <p align="center">
 <a href="#name">Name</a> | <a href="#Synopsis">Synopsis</a> | <a href="#description">Description</a> | <a href="#how-does-it-work">How does it work?</a> | <a href="#conversion_specifiers">Conversion Specifiers</a> | <a href="#appendix-boptional-request--response-headers">Optional Headers</a> | <a href="#examples">Examples</a>
