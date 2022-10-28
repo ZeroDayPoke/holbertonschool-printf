@@ -1,12 +1,16 @@
 .TH _printf 3 "2022-10-27"
 .SH NAME
 _printf - formatted output conversion
-.SH SYNOPSIS
+.SH DEPENDENCIES
 In order to use this function the user will require the following header file in its entirety:
 .RE
 #include <main.h>
-.SH DESCRIPTION
+.RE
+Refer to the README.md for more installation instructions.
+.SH SYNOPSIS
 The _printf function writes output to stdout, the standard output stream, according to a specified format.
+.SH EXHAUSTIVE DESCRIPTION
+to be filled
 .SH CONVERSION SPECIFIER
 There are characters which specify which conversion will be applied. Conversion specifiers are utilized upon detecting a \fB%\fR character.
 The conversion specifier is required according to data type in order for the function to properly display different inputs (char, int, and string).
