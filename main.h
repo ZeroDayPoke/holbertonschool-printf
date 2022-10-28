@@ -18,7 +18,7 @@
 typedef struct
 {
 	int (*fun)(va_list varArg);
-	char *formChar;
+	char formChar;
 } _pcall;
 
 /*
