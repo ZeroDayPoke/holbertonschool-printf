@@ -16,6 +16,8 @@ int _printf(const char *format, ...)
 	if (hcf_check == -1)
 		return (-1);
 	va_start(varArg, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (0);
 	while (format && format[i])
 	{
 		if (format[i] == '%')
