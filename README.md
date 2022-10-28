@@ -1,4 +1,3 @@
-# holbertonschool-printf
 <h1>printf Pseudocode</h1>
 
 <p align="center">
