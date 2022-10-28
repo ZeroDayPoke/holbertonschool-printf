@@ -1,19 +1,41 @@
-.\" Manpage for printf pseudocode
-.TH _printf "27 October 2022" "1.0" "_printf man page"
+.TH _printf 3 "2022-10-27"
 .SH NAME
 _printf - formatted output conversion
 .SH SYNOPSIS
+In order to use this function the user will require the following header file in its entirety:
+.RE
 #include <main.h>
-int _printf(const char *format, ...);
 .SH DESCRIPTION
-The function printf writes output to stdout, the standard output stream.
-.SH OPTIONS
-flags to be added
+The _printf function writes output to stdout, the standard output stream, according to a specified format.
+.SH CONVERSION SPECIFIER
+There are characters which specify which conversion will be applied. Conversion specifiers are utilized upon detecting a \fB%\fR character.
+The conversion specifier is required according to data type in order for the function to properly display different inputs (char, int, and string).
+See examples below for proper structuring.
+.sp
+.SS Conversion specifier list:
+.RS
+.nf
+c: print a single character
+d: print a decimal (base 10) number
+i: print an integer in base 10
+s: print a string of characters
+.RE
+.SH EXAMPLES
+To print strings and characters:
+.sp
+_printf("Print %c%s", 'a', "string");
+.sp
+To print integers and decimal numbers:
+.sp
+_printf("%d%i", 1337, 9000);
 .SH RETURN VALUE
 Upon successful return, _printf returns the number of characters printed (excluding the null byte used the end output to strings).
-.SH SEE ALSO
-standard field to be filled
+.sp 
+If an output error is encountered, a negative value is returned.
+
 .SH BUGS
-Though it is not exactly a bug, we do not stipulate a maximum output in this code. 
+Though it is not exactly a bug, we do not stipulate an arbitrary minimum or maximum output in this code.
+.sp
+NOTE: due to the 32 byte system (x32) the user is still limited to the minimum and maximum integer values: -2147483648 and 2147483647.
 .SH AUTHORS
 Chris Stamper & Mason Counts
