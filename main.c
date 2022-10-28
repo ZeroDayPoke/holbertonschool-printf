@@ -10,8 +10,9 @@
  */
 int main(void)
 {
-    _printf("TEST %s %s TEST", "test", "this");
-    printf("%ld\n", strlen("TEST test this TEST"));
-    printf("%d\n", totesWrite);
+    int totesTotal;
+
+    totesTotal = _printf("TEST %s %s TEST", "test", "this");
+    printf("%d", totesTotal);
     return (0);
 }

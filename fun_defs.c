@@ -5,9 +5,11 @@
  * @chrArg: inbound chrArg
  * Return: just prints to SO
  */
-void p_all_char(va_list chrArg)
+int p_all_char(va_list chrArg)
 {
-	write_to_SO(va_arg(chrArg, int));
+	int totesWrite = 0;
+	totesWrite += write_to_SO(va_arg(chrArg, int));
+	return (totesWrite);
 }
 
 /**
@@ -15,9 +17,11 @@ void p_all_char(va_list chrArg)
  * @intArg: inbound intArg
  * Return: just prints to SO
  */
-void p_all_int(va_list intArg)
+int p_all_int(va_list intArg)
 {
-	write_int(va_arg(intArg, int));
+	int totesWrite = 0;
+	totesWrite += write_int(va_arg(intArg, int));
+	return (totesWrite);
 }
 
 /**
@@ -25,10 +29,12 @@ void p_all_int(va_list intArg)
  * @strArg: inbound strArg
  * Return: just prints to SO
  */
-void p_all_str(va_list strArg)
+int p_all_str(va_list strArg)
 {
+	int totesWrite = 0;
 	char *charArr;
 
 	charArr = va_arg(strArg, char *);
-	write_string(charArr);
+	totesWrite += write_string(charArr);
+	return (totesWrite);
 }

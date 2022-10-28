@@ -7,7 +7,6 @@
  */
 int write_to_SO(char c)
 {
-	totesWrite++;
 	return (write(1, &c, 1));
 }
 
@@ -18,9 +17,9 @@ int write_to_SO(char c)
  * @n: int to be printed
  * Return: void
  */
-void write_int(int n)
+int write_int(int n)
 {
-	int nCount = 0, intArr[10], sign = 0, drakkaris = 0;
+	int nCount = 0, intArr[10], sign = 0, drakkaris = 0, totesWrite = 0;
 
 	if (n == -2147483648)
 	{
@@ -47,13 +46,14 @@ void write_int(int n)
 	{
 		if (sign == 1 || drakkaris == 1)
 		{
-			write_to_SO('-');
+			totesWrite += write_to_SO('-');
 			sign = 0;
 			drakkaris = 0;
 		}
-		write_to_SO(intArr[nCount] + '0');
+		totesWrite += write_to_SO(intArr[nCount] + '0');
 		nCount--;
 	}
+	return (totesWrite);
 }
 
 /**
@@ -61,13 +61,14 @@ void write_int(int n)
  * @str: pointer input argument (str herein)
  * Return: void
  */
-void write_string(char *str)
+int write_string(char *str)
 {
-	int a = 0;
+	int a = 0, totesWrite = 0;
 
 	while (*(str + a) != '\0')
 	{
-		write_to_SO(*(str + a));
+		totesWrite += write_to_SO(*(str + a));
 		a++;
 	}
+	return (totesWrite);
 }
