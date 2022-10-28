@@ -11,12 +11,12 @@ Refer to the README.md for more installation instructions.
 The _printf function writes output to stdout, the standard output stream, according to a specified format.
 .SH EXHAUSTIVE DESCRIPTION
 to be filled
-.SH CONVERSION SPECIFIER
-There are characters which specify which conversion will be applied. Conversion specifiers are utilized upon detecting a \fB%\fR character.
-The conversion specifier is required according to data type in order for the function to properly display different inputs (char, int, and string).
+.SH CONVERSION BY FORMAT CHARACTER
+There are characters which specify which conversion will be applied. These are called format characters. Format characters are utilized upon detecting a \fB%\fR character.
+The format character is required according to data type in order for the function to properly display different inputs (char, int, and string).
 See examples below for proper structuring.
 .sp
-.SS Conversion specifier list:
+.SS Format character list:
 .RS
 .nf
 c: print a single character
