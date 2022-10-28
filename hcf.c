@@ -18,7 +18,7 @@ int _hcf(const char *format)
 		if (format[i] == '%')
 		{
 			i++;
-			if ((format[i] != 'd' && format[i] != 'c' && format[i] != '\0'
+			if ((format[i] != 'd' && format[i] != 'c'
 			&& format[i] != 'i' && format[i] != 's' && format[i] != '%'))
 			{
 				return (-1);
