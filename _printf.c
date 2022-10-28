@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	if (hcf_check == -1)
 		return (-1);
 	va_start(varArg, format);
-	while (format && format[i + 1])
+	while (format && format[i])
 	{
 		if (format[i] == '%')
 		{
@@ -41,7 +41,6 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-	totesWrite += write_to_SO(format[i]);
 	va_end(varArg);
 	return (totesWrite);
 }
