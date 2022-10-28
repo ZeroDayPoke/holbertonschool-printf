@@ -23,10 +23,6 @@ int _printf(const char *format, ...)
 			{
 				totesWrite += write_to_SO('%');
 			}
-			else if (format[i + 1] == '\0')
-			{
-				totesWrite += write_to_SO("");
-			}
 			else
 			{
 				for (j = 0; betty[j].formChar; j++)
