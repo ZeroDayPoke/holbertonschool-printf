@@ -9,7 +9,11 @@ int _hcf(const char *format)
 {
 	int i = 0;
 
-	while (format && format[i])
+	if (format == NULL)
+	{
+		return (-1);
+	}
+	while (format[i])
 	{
 		if (format[i] == '%')
 		{
