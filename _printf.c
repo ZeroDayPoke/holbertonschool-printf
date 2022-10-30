@@ -3,7 +3,7 @@
 /**
  * _printf - prints supported formats to SO
  * @format: input args format string
- * Return: number of chars printed
+ * Return: number of chars printed or -1 on fail
  */
 int _printf(const char *format, ...)
 {
