@@ -23,7 +23,7 @@ $ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
   
 <h2>Format Characters</h2>
 <p>
-There are characters which specify which conversion will be applied. These are called format characters. Format characters are utilized upon detecting a \fB%\fR character.
+There are characters which specify which conversion will be applied. These are called format characters. Format characters are utilized upon detecting a <strong>%</strong> character.
 The format character is required according to data type in order for the function to properly display different inputs (char, int, and string).
 </p>
 c: print a single character
