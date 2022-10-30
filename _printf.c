@@ -7,7 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, j, totesWrite = 0, hcf_check;
+	int i = 0, j, totesWrite = 0;
 	va_list varArg;
 	_pcall betty[] = {{p_all_int, 'd'}, {p_all_int, 'i'},
 	{p_all_char, 'c'}, {p_all_str, 's'}};
