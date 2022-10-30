@@ -10,14 +10,14 @@ The _printf function writes output to stdout, the standard output stream, accord
 All parts of the _printf function in this repository are there to ensure that the user can print integers, characters, and strings of characters all within one function.
 Note: this printf does not support length modifiers, flag characters, precision, or field width.
 
-<h3>Get Started</h3>
+<h2>Get Started</h2>
 In the user's terminal, in the subdirectory where the user would like to install the new repository, type:
 
 ``` 
 $ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
 ``` 
 
-<h4>How Does it Work?</h4>
+<h2>How Does it Work?</h2>
 <p>
 </p>
   
