@@ -12,8 +12,8 @@ Note: this printf does not support length modifiers, flag characters, precision,
 
 <h3>Get Started</h3>
 In the user's terminal, in the subdirectory where the user would like to install the new repository, type:
-```
-$ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
+
+```$ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
 ```
 
 <h4>How Does it Work?</h4>
