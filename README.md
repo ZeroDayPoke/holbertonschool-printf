@@ -1,7 +1,7 @@
 <h1>printf Pseudocode</h1>
 
 <p align="center">
-<a href="#synopsis">Synopsis</a> | <a href="#get_started">Get Started</a> | <a href="#how_does_it_work?">How Does it Work?</a> | <a href="#conversion_specifiers">Format Characters</a> |<a href="#exhaustive_function_descriptions">Exhaustive Function Descriptions</a> | <a href="#return_values">Return Values</a> | <a href="#examples">Examples</a> | <a href="#authors">Authors</a>
+<a href="#synopsis">Synopsis</a> | <a href="#get_started">Get Started</a> | <a href="#how_does_it_work?">How Does it Work?</a> | <a href="#conversion_specifiers">Format Characters</a> |<a href="#file_and_function_descriptions">File and Function Descriptions</a> | <a href="#return_values">Return Values</a> | <a href="#examples">Examples</a> | <a href="#authors">Authors</a>
 </p>
 
 <h2>Synopsis</h2>
@@ -23,7 +23,7 @@ $ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
 There are characters which specify which conversion will be applied. These are called format characters. Format characters are utilized upon detecting a \fB%\fR character.
 The format character is required according to data type in order for the function to properly display different inputs (char, int, and string).
 
-<h6>Exhaustive Function Descriptions</h6>
+<h6>File & Function Descriptions</h6>
 
 <h7>Return Values</h7>
 Upon successful return, _printf returns the number of characters printed (excluding the null byte used the end output to strings).
