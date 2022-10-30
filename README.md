@@ -18,29 +18,37 @@ $ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
 ``` 
 
 <h4>How Does it Work?</h4>
-
+<p>
+</p>
+  
 <h5>Format Characters</h5>
+<p>
 There are characters which specify which conversion will be applied. These are called format characters. Format characters are utilized upon detecting a \fB%\fR character.
 The format character is required according to data type in order for the function to properly display different inputs (char, int, and string).
-
+</p>
 c: print a single character
 d: print a decimal (base 10) number
 i: print an integer in base 10
 s: print a string of characters
 
 <h6>File & Function Descriptions</h6>
+<p>
+</p>
 
 <h7>Return Values</h7>
+<p>
 Upon successful return, _printf returns the number of characters printed (excluding the null byte used the end output to strings).
 If an output error is encountered, a negative value is returned.
-
+</p>
+  
 <h8>Examples</h8>
 To print strings and characters:
-.sp
+``` 
 _printf("Print %c%s", 'a', "string");
-.sp
+``` 
 To print integers and decimal numbers:
-.sp
+``` 
 _printf("%d%i", 1337, 9000);
+``` 
 
 <h9>Authors</h9>
