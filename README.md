@@ -36,6 +36,27 @@ s: print a string of characters
 
 <h2>File & Function Descriptions</h2>
 <p>
+
+| Files        | Descriptions                                                                         |
+| ------------ | ------------------------------------------------------------------------------------ |
+| _printf.c    | placeholder                                                                          |
+| fun_defs.c   | placeholder                                                                          |
+| main.h       | placeholer                                                                           |
+| man_3_printf | placeholder                                                                          |
+| writefun.c   | placeholder                                                                          |
+
+| fun_defs.c Functions        | Descriptions |
+| --------------------------- | ------------ |
+| p_all_char(va_list chrArg)  |  placeholder | 
+| p_all_int(va_list intArg)   |  placeholder |
+| p_all_str(va_list strArg)   |  placeholder |
+
+| writefun.c Functions        | Descriptions |
+| --------------------------- | ------------ |
+| write_to_SO(char c)         |  placeholder |
+| write_int(int n)            |  placeholder |
+| write_string(char *str)     |  placeholder |
+  
 </p>
 
 <h2>Return Values</h2>
