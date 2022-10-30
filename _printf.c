@@ -12,9 +12,9 @@ int _printf(const char *format, ...)
 	_pcall betty[] = {{p_all_int, 'd'}, {p_all_int, 'i'},
 	{p_all_char, 'c'}, {p_all_str, 's'}};
 
-	hcf_check = _hcf(format);
+	/* hcf_check = _hcf(format);
 	if (hcf_check == -1)
-		return (-1);
+		return (-1); */
 	va_start(varArg, format);
 	while (format && format[i])
 	{
