@@ -20,18 +20,12 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1])
 		{
 			if (format[i + 1] == '%')
-			{
 				totesWrite += write_to_SO('%');
-			}
 			else
 			{
 				for (j = 0; betty[j].formChar; j++)
-				{
 					if (format[i + 1] == betty[j].formChar)
-					{
 						totesWrite += betty[j].fun(varArg);
-					}
-				}
 				if ((format[i + 1] != 'd' && format[i + 1] != 'c'
 				&& format[i + 1] != 'i' && format[i + 1] != 's' && format[i + 1] != '%'))
 				{
@@ -44,9 +38,7 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && !(format[i + 1]))
 			break;
 		else
-		{
 			totesWrite += write_to_SO(format[i]);
-		}
 		i++;
 	}
 	va_end(varArg);
