@@ -14,6 +14,19 @@ Note: this printf does not support length modifiers, flag characters, precision,
 In the user's terminal, in the subdirectory where the user would like to install the new repository, type:
 ```httpx $ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
 ```
+```httpx
+GET /api/customer/123 HTTP/1.1
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "id": 123,
+    "fname": "John",
+    "lname": "Doe",
+    "email": ["john@example.com", "johndoe@example.com"]
+}
+```
 
 <h4>How Does it Work?</h4>
 
