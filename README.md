@@ -1,6 +1,6 @@
-<a href="#gear"><img height="130rem" src="http://zerodaypoke.com/images/CSCLOGO.png"></a>
-<br><br>
-<a href="#gear"><img width="250rem" src="(http://zerodaypoke.com/images/CSCLOGO.png)"></a>
+<p align="center">
+  <img width="200" height="200" src="http://zerodaypoke.com/images/CSCLOGO.png">
+</p>
 <h1>printf From Scratch Project</h1>
 
 <p align="center">
