@@ -26,10 +26,13 @@ $ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
 There are characters which specify which conversion will be applied. These are called **format** characters. Format characters are utilized upon detecting a % character.
 The format character is required according to data type in order for the function to properly display different inputs (char, int, and string).
 </p>
+
+``` 
 c: print a single character
 d: print a decimal (base 10) number
 i: print an integer in base 10
 s: print a string of characters
+``` 
 
 <h2>File & Function Descriptions</h2>
 <p>
