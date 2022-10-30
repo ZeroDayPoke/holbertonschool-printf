@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		else if (format[i] == '%' && !(format[i + 1]))
-			break;
+			totesWrite *= 1;
 		else
 			totesWrite += write_to_SO(format[i]);
 		i++;
