@@ -12,12 +12,12 @@ int _printf(const char *format, ...)
 	_pcall betty[] = {{p_all_int, 'd'}, {p_all_int, 'i'},
 	{p_all_char, 'c'}, {p_all_str, 's'}};
 
-	if (format == NULL)
+	if (format == NULL || (format[i] == '%' && !format[i + 1]))
 		return (-1);
 	va_start(varArg, format);
 	while (format && format[i])
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1])
 		{
 			if (format[i + 1] == '%')
 			{
@@ -41,6 +41,8 @@ int _printf(const char *format, ...)
 			}
 			i++;
 		}
+		else if (format[i] == '%' && !(format[i + 1]))
+			break;
 		else
 		{
 			totesWrite += write_to_SO(format[i]);
