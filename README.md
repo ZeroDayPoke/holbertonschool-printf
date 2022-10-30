@@ -26,7 +26,6 @@ The format character is required according to data type in order for the functio
 
 <h7>Return Values</h7>
 Upon successful return, _printf returns the number of characters printed (excluding the null byte used the end output to strings).
-.sp
 If an output error is encountered, a negative value is returned.
 
 <h8>Examples</h8>
