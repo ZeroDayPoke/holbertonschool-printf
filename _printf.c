@@ -7,13 +7,12 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, j, totesWrite = 0, hcf_check = 0;
+	int i = 0, j, totesWrite = 0;
 	va_list varArg;
 	_pcall betty[] = {{p_all_int, 'd'}, {p_all_int, 'i'},
 	{p_all_char, 'c'}, {p_all_str, 's'}};
 
-	hcf_check = _hcf(format);
-	if (hcf_check == -1)
+	if (format == NULL)
 		return (-1);
 	va_start(varArg, format);
 	while (format && format[i])
