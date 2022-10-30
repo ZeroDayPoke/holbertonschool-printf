@@ -14,8 +14,6 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-	if (!(format[i]))
-		return (-1);
 	va_start(varArg, format);
 	while (format && format[i])
 	{
@@ -33,6 +31,12 @@ int _printf(const char *format, ...)
 					{
 						totesWrite += betty[j].fun(varArg);
 					}
+				}
+				if ((format[i + 1] != 'd' && format[i + 1] != 'c'
+				&& format[i + 1] != 'i' && format[i + 1] != 's' && format[i + 1] != '%'))
+				{
+					totesWrite += write_to_SO('%');
+					totesWrite += write_to_SO(format[i + 1]);
 				}
 			}
 			i++;
