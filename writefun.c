@@ -3,7 +3,7 @@
 /**
  * write_to_SO - function that writes a char to SO
  * @c: character to be written
- * Return: write output
+ * Return: 1 on successful stdout write
  */
 int write_to_SO(char c)
 {
@@ -15,7 +15,7 @@ int write_to_SO(char c)
 /**
  * write_int - function that writes ints to SO
  * @n: int to be printed
- * Return: void
+ * Return: number of chars in associated int
  */
 int write_int(int n)
 {
@@ -59,7 +59,7 @@ int write_int(int n)
 /**
  * write_string - writes string to SO
  * @str: pointer input argument (str herein)
- * Return: void
+ * Return: number of chars in associated str
  */
 int write_string(char *str)
 {

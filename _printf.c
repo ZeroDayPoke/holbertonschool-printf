@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _printf - prints to SO
+ * _printf - prints supported formats to SO
  * @format: input args format string
  * Return: number of chars printed
  */
