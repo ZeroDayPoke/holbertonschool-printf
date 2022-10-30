@@ -43,10 +43,13 @@ If an output error is encountered, a negative value is returned.
   
 <h2>Examples</h2>
 To print strings and characters:
+
 ``` 
 _printf("Print %c%s", 'a', "string");
 ``` 
+
 To print integers and decimal numbers:
+
 ``` 
 _printf("%d%i", 1337, 9000);
 ``` 
