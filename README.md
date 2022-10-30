@@ -1,4 +1,4 @@
-<h1>printf Pseudocode</h1>
+<h1>printf From Scratch Project</h1>
 
 <p align="center">
 <a href="#synopsis">Synopsis</a> | <a href="#get_started">Get Started</a> | <a href="#how_does_it_work?">How Does it Work?</a> | <a href="#conversion_specifiers">Format Characters</a> | <a href="#file_and_function_descriptions">File and Function Descriptions</a> | <a href="#return_values">Return Values</a> | <a href="#examples">Examples</a> | <a href="#authors">Authors</a>
@@ -23,7 +23,7 @@ $ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
   
 <h2>Format Characters</h2>
 <p>
-There are characters which specify which conversion will be applied. These are called **format** characters. Format characters are utilized upon detecting a % character.
+There are characters which specify which conversion will be applied. These are called format characters. Format characters are utilized upon detecting a % character.
 The format character is required according to data type in order for the function to properly display different inputs (char, int, and string).
 </p>
 
