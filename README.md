@@ -42,7 +42,7 @@ s: print a string of characters
 
 | Files        | Descriptions                                                                         |
 | ------------ | ------------------------------------------------------------------------------------ |
-| _printf.c    | placeholder                                                                          |
+| _printf.c    | Prints supported outputs to Standard Output                                          |
 | fun_defs.c   | placeholder                                                                          |
 | main.h       | placeholer                                                                           |
 | man_3_printf | placeholder                                                                          |
