@@ -10,8 +10,6 @@ int write_to_SO(char c)
 	return (write(1, &c, 1));
 }
 
-#include "main.h"
-
 /**
  * write_int - function that writes ints to SO
  * @n: int to be printed
