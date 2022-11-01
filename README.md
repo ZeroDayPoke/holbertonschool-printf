@@ -22,9 +22,6 @@ $ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
 
 <h2>How Does it Work?</h2>
 <p>
-
-![PLD_printf](https://user-images.githubusercontent.com/107735231/199147399-7d8709d6-18b3-42fc-84a0-738b8a1f5746.png)
-
 </p>
   
 <h2>Format Characters</h2>
@@ -49,19 +46,19 @@ s: print a string of characters
 | fun_defs.c   | Function defintions envoked from the P call structure in printf                      |
 | main.h       | Contains libraries, structure definitions and prototypes                             |
 | man_3_printf | Manual page                                                                          |
-| writefun.c   | Group of functions that are called from functions that write to call to function that writes to standard output      |
+| writefun.c   | Group of functions called by structure functions or associated structure functions   |
 
 | fun_defs.c Functions        | Descriptions |
 | --------------------------- | ------------ |
-| p_all_char(va_list chrArg)  |  placeholder | 
-| p_all_int(va_list intArg)   |  placeholder |
-| p_all_str(va_list strArg)   |  placeholder |
+| p_all_char(va_list chrArg)  |  print all characters - call write to SO | 
+| p_all_int(va_list intArg)   |  print all integers                      |
+| p_all_str(va_list strArg)   |  print all strings                       |
 
 | writefun.c Functions        | Descriptions |
 | --------------------------- | ------------ |
-| write_to_SO(char c)         |  placeholder |
-| write_int(int n)            |  placeholder |
-| write_string(char *str)     |  placeholder |
+| write_to_SO(char c)         |  function that writes character to standard output |
+| write_int(int n)            |  function that writes integer to standard output   |
+| write_string(char *str)     |  function that writes string to standard output    |
   
 </p>
 
@@ -85,4 +82,4 @@ _printf("%d%i", 1337, 9000);
 ``` 
 
 <h2>Authors</h2>
-<a href="https://github.com/ZeroDayPoke2">Chris Stamper</a> & <a href="https://github.com/spindouken">Mason Counts</a> & <a href="https://github.com/jobabyyy">Johanna Avila</a>
+<a href="https://github.com/ZeroDayPoke2">Chris Stamper</a> & <a href="https://github.com/spindouken">Mason Counts</a>
