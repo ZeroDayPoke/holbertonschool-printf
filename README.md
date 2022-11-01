@@ -42,9 +42,9 @@ s: print a string of characters
 
 | Files        | Descriptions                                                                         |
 | ------------ | ------------------------------------------------------------------------------------ |
-| _printf.c    | Prints supported outputs to Standard Output                                          |
-| fun_defs.c   | Function defintions envoked from the P call structure in printf                      |
-| main.h       | Contains libraries, structure definitions and prototypes                             |
+| _printf.c    | Prints supported formats to standard output                                          |
+| fun_defs.c   | Function defintions invoked from the p structure in main.h file                      |
+| main.h       | Contains libraries, structure definitions, and prototypes                            |
 | man_3_printf | Manual page                                                                          |
 | writefun.c   | Group of functions called by structure functions or associated structure functions   |
 
