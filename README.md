@@ -22,7 +22,9 @@ $ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
 
 <h2>How Does it Work?</h2>
 <p>
+
 ![PLD_printf](https://user-images.githubusercontent.com/107735231/199147399-7d8709d6-18b3-42fc-84a0-738b8a1f5746.png)
+
 </p>
   
 <h2>Format Characters</h2>
