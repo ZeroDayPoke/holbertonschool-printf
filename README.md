@@ -22,6 +22,9 @@ $ git clone https://github.com/ZeroDayPoke2/holbertonschool-printf.git
 
 <h2>How Does it Work?</h2>
 <p>
+
+![](https://github.com/ZeroDayPoke2/holbertonschool-printf/blob/main/PLD_printf.png)
+
 </p>
   
 <h2>Format Characters</h2>
