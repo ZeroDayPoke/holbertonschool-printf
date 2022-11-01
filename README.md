@@ -85,4 +85,4 @@ _printf("%d%i", 1337, 9000);
 ``` 
 
 <h2>Authors</h2>
-<a href="https://github.com/ZeroDayPoke2">Chris Stamper</a> & <a href="https://github.com/spindouken">Mason Counts</a>
+<a href="https://github.com/ZeroDayPoke2">Chris Stamper</a> & <a href="https://github.com/spindouken">Mason Counts</a> & <a href="https://github.com/jobabyyy>Johanna Avilla</a>
