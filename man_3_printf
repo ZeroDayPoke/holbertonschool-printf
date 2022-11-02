@@ -9,8 +9,6 @@ In order to use this function the user will require the following header file in
 Refer to the README.md for more installation instructions.
 .SH SYNOPSIS
 The _printf function writes output to stdout, the standard output stream, according to a specified format.
-.SH EXHAUSTIVE DESCRIPTION
-to be filled
 .SH CONVERSION BY FORMAT CHARACTER
 There are characters which specify which conversion will be applied. These are called format characters. Format characters are utilized upon detecting a \fB%\fR character.
 The format character is required according to data type in order for the function to properly display different inputs (char, int, and string).
