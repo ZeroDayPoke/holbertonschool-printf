@@ -70,3 +70,20 @@ int write_string(char *str)
 	}
 	return (totesWrite);
 }
+
+/**
+ * write_bin_to_SO - prints binary to SO
+ * @n: uint to convert
+ * Return: void
+ */
+int write_bin_to_SO(unsigned int n)
+{
+	int totesWrite = 0;
+
+	if (n > 1)
+	{
+		write_bin_to_SO(n >> 1);
+	}
+	totesWrite += write_to_SO((n & 1) + '0');
+	return (totesWrite);
+}

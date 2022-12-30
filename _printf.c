@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int i = 0, j, totesWrite = 0;
 	va_list varArg;
 	_pcall betty[] = {{p_all_int, 'd'}, {p_all_int, 'i'},
-	{p_all_char, 'c'}, {p_all_str, 's'}};
+	{p_all_char, 'c'}, {p_all_str, 's'}, {p_all_bin, 'b'}};
 
 	if (format == NULL || (format[i] == '%' && !format[i + 1]))
 		return (-1);
@@ -25,8 +25,8 @@ int _printf(const char *format, ...)
 			{
 				for (j = 0; betty[j].formChar; j++)
 					if (format[i + 1] == betty[j].formChar)
-						totesWrite += betty[j].fun(varArg);
-				if ((format[i + 1] != 'd' && format[i + 1] != 'c'
+						totesWrite += betty[j].fun(varArg, 0);
+				if ((format[i + 1] != 'd' && format[i + 1] != 'c' && format[i + 1] != 'b'
 				&& format[i + 1] != 'i' && format[i + 1] != 's' && format[i + 1] != '%'))
 				{
 					totesWrite += write_to_SO('%');
