@@ -5,7 +5,7 @@ int main(void)
 {
 	int count;
 
-	count = _printf("%b\n", 0);
+	count = _printf("%b", 0);
 	printf("0");
 	return (count);
 }

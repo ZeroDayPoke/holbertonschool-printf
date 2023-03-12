@@ -17,6 +17,10 @@ int _printf(const char *format, ...)
 	{NULL, '\0'}};
 	va_list args;
 
+    if (!format)
+        return (0);
+    if (!*format)
+        return (0);
     va_start(args, format);
     while (*format != '\0')
 	{
@@ -37,6 +41,11 @@ int _printf(const char *format, ...)
                     wrt_cnt += betty[i].fun(args);
                     break;
                 }
+            }
+            if (!betty[i].formChar)
+            {
+                wrt_cnt += write(STDOUT_FILENO, "%", 1);
+                wrt_cnt += write(STDOUT_FILENO, &format, 1);
             }
         }
 		else
