@@ -8,18 +8,11 @@
 int _printf(const char *format, ...)
 {
 	int i = 0, wrt_cnt = 0;
-	pf_t betty[] = {
-	{p_all_str, 's'},
-	{p_all_char, 'c'},
-	{p_all_int, 'i'},
-	{p_all_int, 'd'},
-	{p_all_bin, 'b'},
-	{NULL, '\0'}};
+	pf_t betty[] = {{p_all_str, 's'}, {p_all_char, 'c'}, {p_all_int, 'i'},
+	{p_all_int, 'd'}, {p_all_bin, 'b'}, {NULL, '\0'}};
 	va_list args;
 
-	if (!format)
-		return (-1);
-	if (format[0] == '%' && !format[1])
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
 	va_start(args, format);
 	while (*format != '\0')
