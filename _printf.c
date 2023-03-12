@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 
 	if (!format)
 		return (0);
-	if (!*format)
+	if (format[0] == '%' && !format[1])
 		return (0);
 	va_start(args, format);
 	while (*format != '\0')
@@ -33,8 +33,7 @@ int _printf(const char *format, ...)
 				format++;
 				continue;
 			}
-			i = 0;
-			for (; betty[i].formChar; i++)
+			for (i = 0; betty[i].formChar; i++)
 			{
 				if (betty[i].formChar == *format)
 				{
