@@ -45,7 +45,7 @@ int _printf(const char *format, ...)
             if (!betty[i].formChar)
             {
                 wrt_cnt += write(STDOUT_FILENO, "%", 1);
-                wrt_cnt += write(STDOUT_FILENO, &format, 1);
+                wrt_cnt += write(STDOUT_FILENO, format, 1);
             }
         }
 		else
