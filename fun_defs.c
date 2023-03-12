@@ -39,3 +39,22 @@ int p_all_str(va_list strArg)
 		return (write(STDOUT_FILENO, null_msg, strlen(null_msg)));
 	return (write(STDOUT_FILENO, charArr, strlen(charArr)));
 }
+
+int p_all_bin(va_list binArg)
+{
+    unsigned int num = va_arg(binArg, int), wrt_std = 0;
+	int i = 31, flag = 0;
+	char c;
+
+    for (i = 31; i >= 0; i--)
+	{
+		c = (char)(((num >> i) & 1) + '0');
+		if (c != '1' && flag != 1)
+		{
+			continue;
+		}
+		flag = 1;
+        wrt_std += write(STDOUT_FILENO, &c, 1);
+	}
+	return (wrt_std);
+}

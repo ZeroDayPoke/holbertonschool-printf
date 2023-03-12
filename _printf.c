@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
     {p_all_char, 'c'},
     {p_all_int, 'i'},
     {p_all_int, 'd'},
+    {p_all_bin, 'b'},
 	{NULL, '\0'}};
 	va_list args;
 
