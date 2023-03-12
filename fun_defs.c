@@ -7,7 +7,9 @@
  */
 int p_all_char(va_list chrArg)
 {
-	return (write(STDOUT_FILENO, chrArg, 1));
+	char c = va_arg(chrArg, int);
+
+	return (write(STDOUT_FILENO, &c, 1));
 }
 
 int p_all_mod(void)

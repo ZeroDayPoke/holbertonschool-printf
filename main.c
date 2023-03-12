@@ -3,8 +3,9 @@
 
 int main(void)
 {
-	int count;
+	int count, count2;
 
-	count = _printf("%a", 0);
-	return (count);
+	count2 = printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+	count = _printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+	return (count2 - count);
 }
