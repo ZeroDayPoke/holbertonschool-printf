@@ -46,6 +46,8 @@ int p_all_bin(va_list binArg)
 	int i = 31, flag = 0;
 	char c;
 
+	if (num == 0)
+		return (write(STDOUT_FILENO, "0", 1));
     for (i = 31; i >= 0; i--)
 	{
 		c = (char)(((num >> i) & 1) + '0');
