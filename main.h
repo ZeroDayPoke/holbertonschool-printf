@@ -11,17 +11,17 @@
 #include <string.h>
 
 /**
- * _pcall - typedef of struct used to call write functions for _printf
+ * struct pf_s - typedef of struct used to call write functions for _printf
  * @fun: pointer to function to invoke when format character matches
  * @formChar: format character
  *
  * Description: utilizes paired int function pointers and characters
  */
-typedef struct
+typedef struct pf_s
 {
 	int (*fun)(va_list varArg);
 	char formChar;
-} _pcall;
+} pf_t;
 
 /*
  * prototypes - function protos below

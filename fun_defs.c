@@ -12,6 +12,10 @@ int p_all_char(va_list chrArg)
 	return (write(STDOUT_FILENO, &c, 1));
 }
 
+/**
+ * p_all_mod - prints mod operator to SO
+ * Return: chars printed
+ */
 int p_all_mod(void)
 {
 	return (write(STDOUT_FILENO, "%", 1));
@@ -42,15 +46,21 @@ int p_all_str(va_list strArg)
 	return (write(STDOUT_FILENO, charArr, strlen(charArr)));
 }
 
+
+/**
+ * p_all_bin - prints bins from _printf va_list
+ * @binArg: inbound binArg
+ * Return: chars printed
+ */
 int p_all_bin(va_list binArg)
 {
-    unsigned int num = va_arg(binArg, int), wrt_std = 0;
+	unsigned int num = va_arg(binArg, int), wrt_std = 0;
 	int i = 31, flag = 0;
 	char c;
 
 	if (num == 0)
 		return (write(STDOUT_FILENO, "0", 1));
-    for (i = 31; i >= 0; i--)
+	for (i = 31; i >= 0; i--)
 	{
 		c = (char)(((num >> i) & 1) + '0');
 		if (c != '1' && flag != 1)
@@ -58,7 +68,7 @@ int p_all_bin(va_list binArg)
 			continue;
 		}
 		flag = 1;
-        wrt_std += write(STDOUT_FILENO, &c, 1);
+		wrt_std += write(STDOUT_FILENO, &c, 1);
 	}
 	return (wrt_std);
 }
