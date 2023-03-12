@@ -7,6 +7,8 @@
 #include <unistd.h> /* includes write() function */
 #include <stdlib.h> /* includes malloc() & free() */
 #include <stdarg.h> /* includes va_functions */
+#include <stdio.h>
+#include <string.h>
 
 /**
  * _pcall - typedef of struct used to call write functions for _printf
@@ -17,7 +19,7 @@
  */
 typedef struct
 {
-	int (*fun)(va_list varArg, unsigned int opArg);
+	int (*fun)(va_list varArg);
 	char formChar;
 } _pcall;
 
@@ -25,13 +27,11 @@ typedef struct
  * prototypes - function protos below
  */
 int _printf(const char *format, ...);
-int p_all_char(va_list chrArg, unsigned int n);
-int p_all_int(va_list intArg, unsigned int n);
-int p_all_str(va_list strArg, unsigned int n);
-int p_all_bin(va_list binArg, unsigned int n);
-int write_to_SO(char c);
+int p_all_char(va_list chrArg);
+int p_all_int(va_list intArg);
+int p_all_str(va_list strArg);
+int p_all_bin(va_list binArg);
+int p_all_mod(void);
 int write_int(int n);
-int write_string(char *str);
-int write_bin_to_SO(unsigned int n);
 
 #endif

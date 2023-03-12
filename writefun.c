@@ -1,16 +1,6 @@
 #include "main.h"
 
 /**
- * write_to_SO - function that writes a char to SO
- * @c: character to be written
- * Return: 1 on successful stdout write
- */
-int write_to_SO(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
  * write_int - function that writes ints to SO
  * @n: int to be printed
  * Return: number of chars in associated int
@@ -18,6 +8,7 @@ int write_to_SO(char c)
 int write_int(int n)
 {
 	int nCount = 0, intArr[10], sign = 0, drakkaris = 0, totesWrite = 0;
+	char wOut;
 
 	if (n == -2147483648)
 	{
@@ -44,46 +35,13 @@ int write_int(int n)
 	{
 		if (sign == 1 || drakkaris == 1)
 		{
-			totesWrite += write_to_SO('-');
+			totesWrite += write(STDOUT_FILENO, "-", 1);
 			sign = 0;
 			drakkaris = 0;
 		}
-		totesWrite += write_to_SO(intArr[nCount] + '0');
+		wOut = (char)(intArr[nCount] + '0');
+		totesWrite += write(STDOUT_FILENO, &wOut, 1);
 		nCount--;
 	}
-	return (totesWrite);
-}
-
-/**
- * write_string - writes string to SO
- * @str: pointer input argument (str herein)
- * Return: number of chars in associated str
- */
-int write_string(char *str)
-{
-	int a = 0, totesWrite = 0;
-
-	while (*(str + a) != '\0')
-	{
-		totesWrite += write_to_SO(*(str + a));
-		a++;
-	}
-	return (totesWrite);
-}
-
-/**
- * write_bin_to_SO - prints binary to SO
- * @n: uint to convert
- * Return: void
- */
-int write_bin_to_SO(unsigned int n)
-{
-	int totesWrite = 0;
-
-	if (n > 1)
-	{
-		write_bin_to_SO(n >> 1);
-	}
-	totesWrite += write_to_SO((n & 1) + '0');
 	return (totesWrite);
 }

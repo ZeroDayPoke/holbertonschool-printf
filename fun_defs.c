@@ -5,13 +5,14 @@
  * @chrArg: inbound chrArg
  * Return: chars printed
  */
-int p_all_char(va_list chrArg, unsigned int n)
+int p_all_char(va_list chrArg)
 {
-	int totesWrite = 0;
+	return (write(STDOUT_FILENO, chrArg, 1));
+}
 
-	totesWrite += write_to_SO(va_arg(chrArg, int));
-	(void)n;
-	return (totesWrite);
+int p_all_mod(void)
+{
+	return (write(STDOUT_FILENO, "%", 1));
 }
 
 /**
@@ -19,13 +20,9 @@ int p_all_char(va_list chrArg, unsigned int n)
  * @intArg: inbound intArg
  * Return: chars printed
  */
-int p_all_int(va_list intArg, unsigned int n)
+int p_all_int(va_list intArg)
 {
-	int totesWrite = 0;
-
-	totesWrite += write_int(va_arg(intArg, int));
-	(void)n;
-	return (totesWrite);
+	return (write_int(va_arg(intArg, int)));
 }
 
 /**
@@ -33,39 +30,12 @@ int p_all_int(va_list intArg, unsigned int n)
  * @strArg: inbound strArg
  * Return: chars printed
  */
-int p_all_str(va_list strArg, unsigned int n)
+int p_all_str(va_list strArg)
 {
-	int totesWrite = 0;
-	char *charArr;
+	char *charArr, *null_msg = "(null)";
 
 	charArr = va_arg(strArg, char *);
 	if (charArr == NULL)
-	{
-		totesWrite += write_to_SO('(');
-		totesWrite += write_to_SO('n');
-		totesWrite += write_to_SO('u');
-		totesWrite += write_to_SO('l');
-		totesWrite += write_to_SO('l');
-		totesWrite += write_to_SO(')');
-		return (totesWrite);
-	}
-	totesWrite += write_string(charArr);
-	(void)n;
-	return (totesWrite);
-}
-
-/**
- * p_all_bin - prints binary to SO
- * @n: uint to convert
- * Return: void
- */
-int p_all_bin(va_list binArg, unsigned int n)
-{
-	int totesWrite = 0;
-	unsigned int x;
-
-	x = va_arg(binArg, int);
-	totesWrite += write_bin_to_SO(x);
-	(void)n;
-	return (totesWrite);
+		return (write(STDOUT_FILENO, null_msg, strlen(null_msg)));
+	return (write(STDOUT_FILENO, charArr, strlen(charArr)));
 }

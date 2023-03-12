@@ -7,40 +7,41 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, j, totesWrite = 0;
-	va_list varArg;
-	_pcall betty[] = {{p_all_int, 'd'}, {p_all_int, 'i'},
-	{p_all_char, 'c'}, {p_all_str, 's'}, {p_all_bin, 'b'}};
+	int i = 0, wrt_cnt = 0;
+	_pcall betty[] = {
+    {p_all_str, 's'},
+    {p_all_char, 'c'},
+    {p_all_int, 'i'},
+    {p_all_int, 'd'},
+	{NULL, '\0'}};
+	va_list args;
 
-	if (format == NULL || (format[i] == '%' && !format[i + 1]))
-		return (-1);
-	va_start(varArg, format);
-	while (format[i])
+    va_start(args, format);
+    while (*format != '\0')
 	{
-		if (format[i] == '%' && format[i + 1])
+        if (*format == '%')
 		{
-			if (format[i + 1] == '%')
-				totesWrite += write_to_SO('%');
-			else
+            format++;
+            if (*format == '%')
 			{
-				for (j = 0; betty[j].formChar; j++)
-					if (format[i + 1] == betty[j].formChar)
-						totesWrite += betty[j].fun(varArg, 0);
-				if ((format[i + 1] != 'd' && format[i + 1] != 'c' && format[i + 1] != 'b'
-				&& format[i + 1] != 'i' && format[i + 1] != 's' && format[i + 1] != '%'))
-				{
-					totesWrite += write_to_SO('%');
-					totesWrite += write_to_SO(format[i + 1]);
-				}
+				wrt_cnt += p_all_mod();
+				format++;
+				continue;
 			}
-			i++;
-		}
-		else if (format[i] == '%' && !(format[i + 1]))
-			totesWrite = -1;
+			i = 0;
+            for (; betty[i].formChar; i++)
+			{
+                if (betty[i].formChar == *format)
+				{
+                    wrt_cnt += betty[i].fun(args);
+                    break;
+                }
+            }
+        }
 		else
-			totesWrite += write_to_SO(format[i]);
-		i++;
-	}
-	va_end(varArg);
-	return (totesWrite);
+            wrt_cnt += write(STDOUT_FILENO, format, 1);
+        format++;
+    }
+    va_end(args);
+	return (wrt_cnt);
 }

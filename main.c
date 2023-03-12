@@ -5,6 +5,6 @@ int main(void)
 {
 	int count;
 
-	count = _printf("\n%b\n", 44);
+	count = _printf("%%lalala %s", "yolo");
 	return (count);
 }
