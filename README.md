@@ -1,12 +1,13 @@
-<p align="center">
-  <img width="200" height="200" src="http://zerodaypoke.com/images/CSCLOGO.png">
-</p>
-
 # printf From Scratch Project
 
-<p align="center">
-<a href="#synopsis">Synopsis</a> | <a href="#get_started">Get Started</a> | <a href="#how_does_it_work?">How Does it Work?</a> | <a href="#conversion_specifiers">Format Characters</a> | <a href="#file_and_function_descriptions">File and Function Descriptions</a> | <a href="#return_values">Return Values</a> | <a href="#examples">Examples</a> | <a href="#authors">Authors</a>
-</p>
+- [Synopsis](#synopsis)
+- [Get Started](#get-started)
+- [How Does it Work?](#how-does-it-work)
+- [Format Characters](#format-characters)
+- [File and Function Descriptions](#file-and-function-descriptions)
+- [Return Values](#return-values)
+- [Examples](#examples)
+- [Authors](#authors)
 
 ## Synopsis
 
@@ -24,23 +25,21 @@ git clone https://github.com/ZeroDayPoke/holbertonschool-printf.git
 
 ## How Does it Work?
 
-![](https://github.com/ZeroDayPoke2/holbertonschool-printf/blob/main/PLD_printf.png)
-
+![Diagram](PLD_printf.png)
 
 ## Format Characters
 
 There are characters which specify which conversion will be applied. These are called format characters. Format characters are utilized upon detecting a % character.
 The format character is required according to data type in order for the function to properly display different inputs (char, int, and string).
 
-```
+```man
 c: print a single character
 d: print a decimal (base 10) number
 i: print an integer in base 10
 s: print a string of characters
 ```
 
-<h2>File & Function Descriptions</h2>
-<p>
+## File and Function Descriptions
 
 | Files        | Descriptions                                                                       |
 | ------------ | ---------------------------------------------------------------------------------- |
